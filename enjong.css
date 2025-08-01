@@ -1,0 +1,122 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif; /*Untuk mengatur gaya font*/
+    background-color: #F4C2C2;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  .jiey {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .joeng {
+    margin: 2rem auto;
+    width: 80%;
+    color: rgb(146, 20, 51);
+    font-size: 1.1rem;
+  }
+  
+  .Joy {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* SLIDER */
+  .container {
+    width: 100%;
+    display: flex; /* flexsibel bisa diatur atur */
+    justify-content: center;
+    margin-bottom: 4rem; /*memberikan jarak*/
+  }
+  
+  .wrapper {
+    width: 60vw; /* Lebar 60% dari layar*/
+    height: 75vh; /* 75% dari tinggi layar*/
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.6); 
+    overflow: hidden; /*Menyembunyikan konten yang meluap (overflow) dari ukuran elemen*/
+    position: relative;
+  }
+  
+  .container .wrapper-holder {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    height: 400px; 
+    width: 60vw;
+    animation: slider 30s ease-in-out infinite alternate;
+
+  }
+  
+  #slider-img-1 {
+    background-image: url(osis.jpg);
+  }
+  
+  #slider-img-2 {
+    background-image: url(competition.jpg);
+  }
+  
+  #slider-img-3 {
+    background-image: url(sera.jpg);
+  }
+  
+  #slider-img-1,
+  #slider-img-2,
+  #slider-img-3 {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .button-holder {
+    position: absolute;
+    left: 45%;
+    bottom: 1rem;
+  }
+  
+  .button {
+    background-color: aliceblue;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0.3rem;
+    cursor: pointer; /* ngubah kursor menjadi icon tangan yg nunjukin bisa di klik */
+  }
+  
+  .button:hover {
+    box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /*animasi yg slide ituu*/
+  /* looping selamanya (infinite) dan balik arah tiap kali selesai (alternate)*/
+  @keyframes slider {
+    0% {
+      transform: translateX(0%);
+    }
+    20% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    45% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-200%);
+    }
+    70% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+   
